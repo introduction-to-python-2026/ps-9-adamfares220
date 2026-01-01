@@ -1,7 +1,8 @@
 import pandas as pd
 
 df = pd.read_csv("parkinsons.csv")
-df = df.dropna()from sklearn.preprocessing import MinMaxScaler
+df = df.dropna()
+df.head()
 
 print(df.columns.to_list())
 
@@ -18,7 +19,6 @@ y = df['PPE']
 from sklearn.preprocessing import MinMaxScaler
 
 scaler = MinMaxScaler()
-# x now contains only numerical columns, so we can directly apply the scaler.
 x = scaler.fit_transform(x)
 
 from sklearn.model_selection import train_test_split
@@ -38,4 +38,3 @@ print(f'R2 Score: {r2}')
 import joblib
 
 joblib.dump(model, 'my_model.joblib')
-
