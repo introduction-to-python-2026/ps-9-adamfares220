@@ -9,7 +9,7 @@ print(df.columns.to_list())
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-sns.pairplot(df, hue="name", diag_kind="MDVP:Fo(Hz)", corner=True)
+sns.pairplot(df, hue="PPE", diag_kind="kde", corner=True)
 plt.show()
 
 selected_features = ['status', 'HNR']
